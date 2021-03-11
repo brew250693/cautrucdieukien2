@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chisoBMI</title>
+</head>
+<body>
+<input type="text" id ="weight" placeholder="weight(kg)">
+<input type="text" id ="height" placeholder="height(m)">
+<input type="button" onclick="bmi()" value = BMI>
+<script>
+    function bmi() {
+        let a =parseInt(document.getElementById("weight").value);
+        let b =parseFloat(document.getElementById("height").value);
+        let bmi = a / (b*b);
+        alert(bmi)
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+
+    }
+</script>
+
+</body>
+</html>
